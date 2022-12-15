@@ -1,0 +1,44 @@
+{
+  "name": "i40xx-emu",
+  "version": "1.0.0",
+  "author": "Mark Ablovatskii <mark.ablov@gmail.com>",
+  "license": "MIT",
+  "description": "Emulator for intel 4004/4040 microprocessors",
+  "keywords": [
+    "intel",
+    "4004",
+    "4040",
+    "emulator",
+    "i4004",
+    "i4040"
+  ],
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint ./src",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markablov/i40xx-emu.git"
+  },
+  "homepage": "https://github.com/markablov/i40xx-emu",
+  "bugs": {
+    "url": "https://github.com/markablov/i40xx-emu/issues"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.19.1",
+    "@babel/plugin-syntax-class-properties": "^7.12.13",
+    "eslint": "^8.29.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.1.0"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint"
+    ]
+  },
+  "type": "module"
+}
