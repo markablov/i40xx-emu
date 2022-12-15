@@ -11,7 +11,7 @@ class ROM {
   /*
    * Check if provided address is in range for ROM
    */
-  #isAddressValid(address) {
+  isAddressValid(address) {
     return address >= 0 && address < this.data.length;
   }
 
@@ -43,7 +43,7 @@ class ROM {
       // A3 stage
       case 2:
         this.address |= (this.cpu.getPinsData([D0, D1, D2, D3]) << 8);
-        if (!this.#isAddressValid(this.address)) {
+        if (!this.isAddressValid(this.address)) {
           throw `Address ${this.address} is not valid`;
         }
 
