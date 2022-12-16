@@ -36,7 +36,7 @@ class CPUPins {
    * For example put 0xA to [D0, D1, D2, D3] pins, and you would got D0 = 0, D1 = 1, D2 = 0, D3 = 1
    */
   setPinsData(pins, value) {
-    for (const [idx, pin] of this.#pins.entries()) {
+    for (const [idx, pin] of pins.entries()) {
       this.#pins[pin] = value & (1 << idx);
     }
   }
