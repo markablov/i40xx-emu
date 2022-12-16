@@ -60,7 +60,8 @@ class RAM {
   }
 
   #selectedBank() {
-    return this.banks[RAM.getBankNoFromPinsData(this.#cpu.getPinsData([CM_RAM0, CM_RAM1, CM_RAM2, CM_RAM3]))];
+    const cmRam = this.#cpu.getPinsData([CM_RAM0, CM_RAM1, CM_RAM2, CM_RAM3]);
+    return cmRam ? this.banks[RAM.getBankNoFromPinsData(cmRam)] : null;
   }
 
   #execute(bank, opa, data) {
